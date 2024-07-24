@@ -1,4 +1,4 @@
-.cardContainer {
+.countryCard {
     border: 2px solid black;
     height: 200px;
     width: 200px;
@@ -16,12 +16,13 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    height: 100vh;
+    min-height: 100vh;
 }
 
-img {
+.countryCard img {
     height: 100px;
     width: 150px;
+    object-fit: contain;
 }
 
 .searchBox {
@@ -35,5 +36,6 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    min-height: 100vh;
 }

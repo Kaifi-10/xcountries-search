@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import './Country.css'  // <-- Changed from CSS module to regular CSS
+import './Country.css'
 
 function Country() {
     const URL = "https://restcountries.com/v3.1/all"
@@ -20,38 +20,38 @@ function Country() {
             }
         }
         fetchData()
-        console.log("country:", data)
     }, [])
     
     const handleSearch = (e) => {
-        setSearch(e.target.value)
-    }
-    
-    useEffect(() => {
-        setFilterData(
-            data.filter(country => country.name.common.toLowerCase().includes(search.toLowerCase()))
+        const searchTerm = e.target.value.toLowerCase()
+        setSearch(searchTerm)
+        
+       
+        const filtered = data.filter(country => 
+            country.name.common.toLowerCase().includes(searchTerm)
         )
-    }, [search, data])
+        setFilterData(filtered)
+    }
     
     const CountryCard = ({ flagName, flagImage, alt }) => {
         return (
-            <div className="countryCard cardContainer">  
-                <img src={flagImage} alt={alt} width={64}/>
+            <div className="countryCard">  
+                <img src={flagImage} alt={alt} />
                 <h2>{flagName}</h2>
             </div>
         )
     }
     
     return (
-        <div className="container countryCard">  
+        <div className="container">  
             <input 
                 type='text'
                 placeholder="Search for a country..." 
                 value={search} 
                 onChange={handleSearch} 
-                className="searchBox countryCard"  
+                className="searchBox"  
             />
-            <div className="countryContainer countryCard">  
+            <div className="countryContainer">  
                 {filterData.map((country) => (
                     <CountryCard 
                         key={country.cca3} 
