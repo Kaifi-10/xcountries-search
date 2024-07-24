@@ -3,7 +3,7 @@ import styles from './Country.module.css'
 
 function CountryCard({flagName, flagImage, alt}) {
   return (
-    <div className={styles.card}>
+    <div className={styles.countryCard}>
         <img src={flagImage} alt={alt} width={64}/>
         <h2>{flagName}</h2>
     </div>
