@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-// import CountryCard from './CountryCard'
+import CountryCard from './CountryCard'
 import styles from './Country.module.css'
 
 function Country() {
@@ -35,14 +35,7 @@ function Country() {
         )
     },[search,data])
 
-    const CountryCard = ({flagName, flagImage, alt}) =>{
-        return (
-            <div className={styles.countryCard } >
-                <img src={flagImage} alt={alt} width={64}/>
-                <h2>{flagName}</h2>
-            </div>
-          )
-    }
+ 
 
   return (
     <div className={styles.container}>
