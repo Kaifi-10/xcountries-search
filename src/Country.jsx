@@ -33,11 +33,11 @@ function Country() {
         setFilterData(
             data.filter(country => country.name.common.toLowerCase().includes(search.toLowerCase()))
         )
-    },[search])
+    },[search,data])
 
     const CountryCard = ({flagName, flagImage, alt}) =>{
         return (
-            <div className={styles.countryCard}>
+            <div className={`${styles.countryCard} ${styles.cardContainer}`} >
                 <img src={flagImage} alt={alt} width={64}/>
                 <h2>{flagName}</h2>
             </div>
@@ -52,7 +52,7 @@ function Country() {
         onChange={handleSearch} 
         className={styles.searchBox}
         />
-        <div className={styles.countryContainer}>
+        <div className={`${styles.countryContainer} ${styles.countryCard}`}>
             
             {filterData.map( (country) =>(
                 <CountryCard key={country.cca3} flagName={country.name.common} flagImage={country.flags.png} alt={country.flags.alt}/>
