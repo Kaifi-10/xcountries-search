@@ -1,4 +1,4 @@
-.countryCard{
+.cardContainer {
     border: 2px solid black;
     height: 200px;
     width: 200px;
@@ -10,34 +10,30 @@
     align-items: center;
     border-radius: 8px;
     text-align: center;
-
 }
 
-.countryContainer{
+.countryContainer {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     height: 100vh;
 }
 
-img{
+img {
     height: 100px;
     width: 150px;
-    /* padding: 10px; */
 }
 
-.searchBox{
+.searchBox {
     margin: 20px;
     width: 600px;
     height: 30px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
 }
 
-.container{
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
 }
