@@ -45,12 +45,12 @@ function Country() {
     }
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${styles.countryCard}`}>
         <input type='text'
         placeholder="Search for a country..." 
         value={search} 
         onChange={handleSearch} 
-        className={styles.searchBox}
+        className={`${styles.searchBox} ${styles.countryCard}`}
         />
         <div className={`${styles.countryContainer} ${styles.countryCard}`}>
             
