@@ -52,7 +52,7 @@ function Country() {
         onChange={handleSearch} 
         className={styles.searchBox}
         />
-        <div className={styles.country}>
+        <div className={styles.countryContainer}>
             
             {filterData.map( (country) =>(
                 <CountryCard key={country.cca3} flagName={country.name.common} flagImage={country.flags.png} alt={country.flags.alt}/>
