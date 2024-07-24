@@ -37,7 +37,7 @@ function Country() {
 
     const CountryCard = ({flagName, flagImage, alt}) =>{
         return (
-            <div className={`${styles.countryCard} ${styles.cardContainer}`} >
+            <div className={styles.countryCard } >
                 <img src={flagImage} alt={alt} width={64}/>
                 <h2>{flagName}</h2>
             </div>
@@ -45,14 +45,14 @@ function Country() {
     }
 
   return (
-    <div className={`${styles.container} ${styles.countryCard}`}>
+    <div className={styles.container}>
         <input type='text'
         placeholder="Search for a country..." 
         value={search} 
         onChange={handleSearch} 
-        className={`${styles.searchBox} ${styles.countryCard}`}
+        className={styles.searchBox}
         />
-        <div className={`${styles.countryContainer} ${styles.countryCard}`}>
+        <div className={styles.countryContainer}>
             
             {filterData.map( (country) =>(
                 <CountryCard key={country.cca3} flagName={country.name.common} flagImage={country.flags.png} alt={country.flags.alt}/>
